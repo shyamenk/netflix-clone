@@ -1,0 +1,26 @@
+.lists {
+  color: white;
+  margin-left: 20px;
+}
+.list__posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+.list__posters::-webkit-scrollbar {
+  display: none;
+}
+.list__poster {
+  max-height: 100px;
+  object-fit: contain;
+  margin-right: 10px;
+  transition: transform 450ms;
+}
+.list__poster:hover {
+  transform: scale(1.08);
+  opacity: 1;
+}
+.list__poster_large {
+  max-height: 250px;
+}
