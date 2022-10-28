@@ -11,16 +11,14 @@ const Banner = () => {
       const response = await axios.get(requests.fetchNetflixOriginal)
 
       setmovie(
-        response.data.results[
-          Math.floor(Math.random() * (response.data.results.length - 1 - 1) + 1)
-        ],
+        response.data.results[Math.floor(Math.floor(Math.random() * 20 + 1))],
       )
       return response
     }
 
     fetchMovie()
   }, [])
-  console.log(movie?.backdrop_path)
+  // console.log(movie?.backdrop_path)
   return (
     <header
       className="banner"
