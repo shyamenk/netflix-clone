@@ -29,18 +29,19 @@ function App() {
         )
       } else {
         //Logout
-        dispatch(logOut)
+        dispatch(logOut())
       }
     })
     return unsubscribe
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [dispatch])
 
   return (
     <BrowserRouter>
       <Routes>
         {user ? (
-          <Route exact path="/" element={<HomeScreen />} />
+          <>
+            <Route exact path="/" element={<HomeScreen />} />
+          </>
         ) : (
           <Route path="/" element={<LoginScreen />} />
         )}
